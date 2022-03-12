@@ -34,8 +34,8 @@ function findCommonElement(array1, array2) {
  
 
 function checkWord(attempt) {
-    attLetters = []
-    trueLetters = []
+    let attLetters = []
+    let trueLetters = []
 
     for (let i = 0; i < attempt.length; i++) {
         attLetters.push(attempt[i])
