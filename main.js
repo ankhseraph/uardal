@@ -1,7 +1,7 @@
 let selectedRow = 'a'
 let letter = 1
 import WORDS from './words.js'
-let word = WORDS[Math.floor(Math.random()*1620)]
+let word = WORDS[Math.floor(Math.random()*1682)]
 console.log(word)
 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 function contains(a, obj) {
@@ -85,7 +85,6 @@ document.addEventListener('keydown', (event) => {
         }
         changedBox = document.getElementById(letter + selectedRow);
         changedBox.innerHTML = ''
-        console.log(letter + selectedRow, "HAS BEEN REMOVED")
     }
 
     if (contains(alphabet, event.key)) {
@@ -94,7 +93,6 @@ document.addEventListener('keydown', (event) => {
         if (letter != 5) {
             letter += 1
         }
-        console.log(letter + selectedRow, "HAS BEEN CHANGED")
     }
 
     if (event.key == 'Enter') {
