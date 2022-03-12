@@ -1,5 +1,5 @@
 let selectedRow = 'a'
-let letter = 1
+let letter = 0
 let greenLetters = []
 let yellowLetters = []
 let grayLetters = []
@@ -71,19 +71,20 @@ document.addEventListener('keydown', (event) => {
     let changedBox = document.getElementById(letter + selectedRow);
 
     if (event.key == 'Backspace') {
-        changedBox.innerHTML = ''
-        if (letter != 1) {
+        if (letter != 0) {
+            changedBox.innerHTML = ''
+        }
+        if (letter != 0) {
             letter -= 1
         }
-        changedBox = document.getElementById(letter + selectedRow);
-        changedBox.innerHTML = ''
     }
 
     if (contains(alphabet, event.key)) {
-        changedBox = document.getElementById(letter + selectedRow);
-        changedBox.innerHTML = event.key
         if (letter != 5) {
             letter += 1
+            console.log(letter)
+            changedBox = document.getElementById(letter + selectedRow);
+            changedBox.innerHTML = event.key
         }
     }
 
@@ -94,27 +95,27 @@ document.addEventListener('keydown', (event) => {
             if (selectedRow == 'a') {
                 checkWord(writtenWord);
                 selectedRow = 'b'
-                letter = 1;
+                letter = 0;
 
             } else if (selectedRow == 'b') {
                 checkWord(writtenWord);
                 selectedRow = 'c'
-                letter = 1;
+                letter = 0;
 
             } else if (selectedRow == 'c') {
                 checkWord(writtenWord);
                 selectedRow = 'd'
-                letter = 1;
+                letter = 0;
 
             } else if (selectedRow == 'd') {
                 checkWord(writtenWord);
                 selectedRow = 'e'
-                letter = 1;
+                letter = 0;
 
             } else if (selectedRow == 'e') {
                 checkWord(writtenWord);
                 selectedRow = 'f'
-                letter = 1
+                letter = 0;
 
             } else if (selectedRow == 'f') {
                 checkWord(writtenWord);
