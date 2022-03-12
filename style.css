@@ -37,9 +37,50 @@ hr {
     border-color: #3a3a3c;
     width: 100px;
     height: 100px;
+    line-height: 90px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     text-align: center;
     justify-content: center;
     font-size: 50px;
+}
+
+#keyboard {
+    width: 480px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+#keyboard li {
+    float: left;
+    margin: 0px 5px 5px 0;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+    line-height: 40px;
+    background: rgb(46, 46, 46);
+    border: none;
+    border-radius: 5px;
+}
+#keyboard .tab, #keyboard .delete {
+    width: 70px;
+    justify-content: center;
+}
+#keyboard .space {
+    clear: left;
+    width: 681px;
+}
+.on {
+    display: none;
+}
+#keyboard li:hover {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    border-color: #e5e5e5;
+    cursor: pointer;
 }
