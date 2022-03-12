@@ -82,7 +82,6 @@ document.addEventListener('keydown', (event) => {
     if (contains(alphabet, event.key)) {
         if (letter != 5) {
             letter += 1
-            console.log(letter)
             changedBox = document.getElementById(letter + selectedRow);
             changedBox.innerHTML = event.key
         }
