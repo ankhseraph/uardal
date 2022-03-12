@@ -1,5 +1,8 @@
 let selectedRow = 'a'
 let letter = 1
+let greenLetters = []
+let yellowLetters = []
+let grayLetters = []
 import WORDS from './words.js'
 let word = WORDS[Math.floor(Math.random()*1682)]
 console.log(word)
@@ -26,6 +29,7 @@ function findCommonElement(array1, array2) {
 
                 if (yellowLetter.style["background-color"] != "#121213" || yellowLetter.style["background-color"] != "#6d9c70") {
                     yellowLetter.style["background-color"] = "#d1c27c";
+                    document.getElementById(yellowLetter.innerHTML).style["background-color"] = "#d1c27c"
                 }
             }
         }
@@ -46,6 +50,7 @@ function checkWord(attempt) {
         if (!(trueLetters.includes(attLetters[i]))) {
             let wrongLetter = document.getElementById((i+1)+selectedRow)
             wrongLetter.style["background-color"] = "#545457"
+            document.getElementById(wrongLetter.innerHTML).style["background-color"] = "#0d0d0e"
         }
     }
 
@@ -57,24 +62,11 @@ function checkWord(attempt) {
         if (attempt[i] == word[i]) {
             let correctLetter = document.getElementById((i+1)+selectedRow)
             correctLetter.style["background-color"] = "#6d9c70";
+            document.getElementById(correctLetter.innerHTML).style["background-color"] = "#6d9c70"
         }
 
     }
 }
-
-function wrongLetters(att) {
-    for (let i = 0; i < att.length; i++) {
-
-
-        let wrongLetter = document.getElementById((i+1)+selectedRow)
-
-        if (wrongLetter.style["background-color"] != "#6d9c70" || wrongLetter.style["background-color"] != "#d1c27c") {
-            wrongLetter.style["background-color"] = "#545457"
-        }
-    }
-}
-    
-
 document.addEventListener('keydown', (event) => {
     let changedBox = document.getElementById(letter + selectedRow);
 
