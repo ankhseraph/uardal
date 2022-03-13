@@ -12,7 +12,7 @@ body {
 h1 {
     font-family: 'Arvo', serif;
     color: white;
-    font-size: 400%;
+    font-size: 65px;
     font-weight: bold;
     position: relative;
     text-align: center;
@@ -27,13 +27,13 @@ hr {
     height: 2px;
     background: #3a3a3c;
     margin-top: 0px;
-    margin-bottom: 2%;
+    margin-bottom: 50px;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    gap: 3px;
+    gap: 10px;
     justify-content: center;
     margin: 0 auto
 }
@@ -44,7 +44,7 @@ hr {
     border-color: #3a3a3c;
     width: 100px;
     height: 100px;
-    line-height: 180%;
+    line-height: 90px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     text-align: center;
@@ -53,10 +53,9 @@ hr {
 }
 
 #keyboard {
-    width: 70%;
-    height: 70%;
+    width: 450px;
     margin: 0 auto;
-    margin-top: 1%;
+    margin-top: 30px;
     padding: 0;
     list-style: none;
     justify-content: center;
@@ -64,18 +63,23 @@ hr {
 #keyboard li {
     float: left;
     margin: 0px 5px 5px 0;
-    width: 9%;
+    width: 40px;
+    height: 40px;
     text-align: center;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
-    line-height: 500%;
+    line-height: 40px;
     background: rgb(46, 46, 46);
     border: none;
     border-radius: 5px;
 }
 #keyboard .tab, #keyboard .delete {
-    width:80px;
+    width:40px;
     justify-content: center;
+}
+#keyboard .space {
+    clear: left;
+    width: 681px;
 }
 .on {
     display: none;
