@@ -1,3 +1,10 @@
+* {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 body {
     background-color: #121213;
 }
@@ -46,7 +53,7 @@ hr {
 }
 
 #keyboard {
-    width: 480px;
+    width: 490px;
     margin: 0 auto;
     margin-top: 30px;
     padding: 0;
@@ -67,7 +74,7 @@ hr {
     border-radius: 5px;
 }
 #keyboard .tab, #keyboard .delete {
-    width: 70px;
+    width:80px;
     justify-content: center;
 }
 #keyboard .space {
