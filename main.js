@@ -135,6 +135,6 @@ document.addEventListener('click' , (event) => {
 document.addEventListener('keydown', (event) => {
     if (hasFinished == false) {
         console.log(hasFinished)
-        type(event)
+        type(event.key)
     }
 })
