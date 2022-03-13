@@ -129,7 +129,7 @@ function type(event) {
 }
 
 document.addEventListener('click' , (event) => {
-    let typed = event.target.innerHTML
+    let typed = event.target.id
     type(typed)
 })
 document.addEventListener('keydown', (event) => {
