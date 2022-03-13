@@ -74,7 +74,7 @@ hr {
     border-radius: 5px;
 }
 #keyboard .tab, #keyboard .delete {
-    width:80px;
+    width:40px;
     justify-content: center;
 }
 #keyboard .space {
