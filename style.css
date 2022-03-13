@@ -33,7 +33,7 @@ hr {
 .container {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    gap: 10px;
+    gap: 3px;
     justify-content: center;
     margin: 0 auto
 }
