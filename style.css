@@ -4,7 +4,16 @@
     -ms-user-select: none;
     user-select: none;
 }
-
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
 body {
     background-color: #121213;
 }
