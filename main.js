@@ -1,11 +1,10 @@
 let selectedRow = 'a'
 let letter = 0
-let greenLetters = []
-let yellowLetters = []
-let grayLetters = []
+let hasFinished = false
 import WORDS from './words.js'
 let word = WORDS[Math.floor(Math.random()*1682)]
 console.log(word)
+const keys = document.getElementsByClassName("letter")
 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 function contains(a, obj) {
     for (let i = 0; i < a.length; i++) {
@@ -33,7 +32,7 @@ function findCommonElement(array1, array2) {
                 }
             }
         }
-    };
+    }
 }
  
 
@@ -67,10 +66,12 @@ function checkWord(attempt) {
 
     }
 }
-document.addEventListener('keydown', (event) => {
+
+function type(event) {
     let changedBox = document.getElementById(letter + selectedRow);
 
-    if (event.key == 'Backspace') {
+
+    if (event == 'Backspace') {
         if (letter != 0) {
             changedBox.innerHTML = ''
         }
@@ -79,15 +80,15 @@ document.addEventListener('keydown', (event) => {
         }
     }
 
-    if (contains(alphabet, event.key)) {
+    if (contains(alphabet, event)) {
         if (letter != 5) {
             letter += 1
             changedBox = document.getElementById(letter + selectedRow);
-            changedBox.innerHTML = event.key
+            changedBox.innerHTML = event
         }
     }
 
-    if (event.key == 'Enter') {
+    if (event == 'Enter') {
         let writtenWord = document.getElementById(1+selectedRow).innerHTML + document.getElementById(2+selectedRow).innerHTML + document.getElementById(3+selectedRow).innerHTML + document.getElementById(4+selectedRow).innerHTML + document.getElementById(5+selectedRow).innerHTML
 
         if (contains(WORDS, writtenWord)) {
@@ -120,9 +121,20 @@ document.addEventListener('keydown', (event) => {
                 checkWord(writtenWord);
                 
                 if (writtenWord == word) {
-
+                    hasFinished = true
                 }
             }
         }
+    }
+}
+
+document.addEventListener('click' , (event) => {
+    let typed = event.target.innerHTML
+    type(typed)
+})
+document.addEventListener('keydown', (event) => {
+    if (hasFinished == false) {
+        console.log(hasFinished)
+        type(event)
     }
 })
