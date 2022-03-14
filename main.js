@@ -38,8 +38,7 @@ function findCommonElement(array1, array2) {
 }
  
 
-function checkWord(atte) {
-    let attempt = atte.toLowerCase()
+function checkWord(attempt) {
     if (attempt == word) {
         hasFinished = true
         jsConfetti.addConfetti()
@@ -91,7 +90,7 @@ function type(event) {
         if (letter != 5) {
             letter += 1
             changedBox = document.getElementById(letter + selectedRow);
-            changedBox.innerHTML = event.toUpperCase()
+            changedBox.innerHTML = event
         }
     }
 
