@@ -2,7 +2,6 @@ let selectedRow = 'a'
 let letter = 0
 let hasFinished = false
 import WORDS from './words.js'
-import 'animate.css';
 let word = WORDS[Math.floor(Math.random()*1682)]
 console.log(word)
 const keys = document.getElementsByClassName("letter")
