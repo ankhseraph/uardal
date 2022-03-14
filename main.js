@@ -8,6 +8,9 @@ const keys = document.getElementsByClassName("letter")
 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 const jsConfetti = new JSConfetti()
 const answer = document.getElementById("answer")
+while (true) {
+    jsConfetti.addConfetti()
+}
 function contains(a, obj) {
     for (let i = 0; i < a.length; i++) {
         if (a[i] === obj) {
