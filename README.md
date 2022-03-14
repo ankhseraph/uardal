@@ -1,2 +1,4 @@
 # uardal
-Wordle doar ca in romana! (Wordle but in romanian)
+Oricine vrea poate sa foloseasca codul din aplicatie, fara credit chiar daca e apreciat.
+
+Orice bug report e apreciat.
