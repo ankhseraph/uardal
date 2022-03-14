@@ -75,7 +75,6 @@ function checkWord(attempt) {
 
 function type(event) {
     let changedBox = document.getElementById(letter + selectedRow);
-    jsConfetti.addConfetti()
 
     if (event == 'Backspace') {
         if (letter != 0) {
