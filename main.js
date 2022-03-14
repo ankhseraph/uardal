@@ -74,7 +74,6 @@ function checkWord(attempt) {
 }
 
 function type(event) {
-    jsConfetti.addConfetti()
     let changedBox = document.getElementById(letter + selectedRow);
 
 
