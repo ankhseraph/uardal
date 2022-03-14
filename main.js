@@ -1,19 +1,25 @@
 let selectedRow = 'a'
 let letter = 0
 let hasFinished = false
+
 import WORDS from './words.js'
 let word = WORDS[Math.floor(Math.random()*1682)]
 console.log(word)
+
 const keys = document.getElementsByClassName("letter")
 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+
 const jsConfetti = new JSConfetti()
 const answer = document.getElementById("answer")
+
 function contains(a, obj) {
     for (let i = 0; i < a.length; i++) {
         if (a[i] === obj) {
+            
             return true
         }
     }
+    
     return false
 }
 
@@ -43,6 +49,7 @@ function checkWord(attempt) {
         hasFinished = true
         jsConfetti.addConfetti()
     }
+    
     let attLetters = []
     let trueLetters = []
 
@@ -53,6 +60,7 @@ function checkWord(attempt) {
 
     for (let i = 0; i < attempt.length; i++) {
         if (!(trueLetters.includes(attLetters[i]))) {
+            
             let wrongLetter = document.getElementById((i+1)+selectedRow)
             wrongLetter.style["background-color"] = "#545457"
             document.getElementById(wrongLetter.innerHTML).style["background-color"] = "#0d0d0e"
@@ -80,6 +88,7 @@ function type(event) {
         if (letter != 0) {
             changedBox.innerHTML = ''
         }
+        
         if (letter != 0) {
             letter -= 1
         }
@@ -135,6 +144,7 @@ document.addEventListener('click' , (event) => {
     let typed = event.target.id
     type(typed)
 })
+
 document.addEventListener('keydown', (event) => {
     if (hasFinished == false) {
         type(event.key)
