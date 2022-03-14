@@ -39,6 +39,8 @@ function findCommonElement(array1, array2) {
  
 
 function checkWord(attempt) {
+    answer.style["display"] = "block"
+                answer.innerHTML = word.toUpperCase();
     if (attempt == word) {
         hasFinished = true
         jsConfetti.addConfetti()
