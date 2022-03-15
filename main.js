@@ -34,6 +34,7 @@ function findCommonElement(array1, array2) {
 
                 if (yellowLetter.style["background-color"] != "#121213" || yellowLetter.style["background-color"] != "#6d9c70") {
                     yellowLetter.style["background-color"] = "#d1c27c";
+                    anim(yellowLetter, 'flipInX')
                     let yellowKey = document.getElementById(yellowLetter.innerHTML)
                     yellowKey.style["background-color"] = "#d1c27c"
                     anim(yellowKey, 'fadeIn')
@@ -61,6 +62,7 @@ function checkWord(attempt) {
         if (!(trueLetters.includes(attLetters[i]))) {
             let wrongLetter = document.getElementById((i+1)+selectedRow)
             wrongLetter.style["background-color"] = "#545457"
+            anim(wrongLetter, 'flipInX')
             let wrongKey = document.getElementById(wrongLetter.innerHTML)
             wrongKey.style["background-color"] = "#0d0d0e"
             anim(wrongKey, 'hinge')
@@ -77,6 +79,7 @@ function checkWord(attempt) {
         if (attempt[i] == word[i]) {
             let correctLetter = document.getElementById((i+1)+selectedRow)
             correctLetter.style["background-color"] = "#6d9c70";
+            anim(correctLetter, 'fadeInX')
             let correctKey = document.getElementById(correctLetter.innerHTML)
             correctKey.style["background-color"] = "#6d9c70"
             anim(correctKey, 'fadeIn')
