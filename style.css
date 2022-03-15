@@ -4,7 +4,7 @@
     -ms-user-select: none;
     user-select: none;
 }
-.animate__animated.animate__bounce {
+.animate__animated.animate__hinge {
   --animate-duration: 30s;
 }
 
