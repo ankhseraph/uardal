@@ -5,7 +5,7 @@
     user-select: none;
 }
 .animate__animated.animate__hinge {
-  --animate-duration: 0.8s;
+  --animate-duration: 0.65s;
 }
 
 h2 {
