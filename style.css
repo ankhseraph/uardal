@@ -4,6 +4,10 @@
     -ms-user-select: none;
     user-select: none;
 }
+.animate__animated.animate__bounce {
+  --animate-duration: 30s;
+}
+
 h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
