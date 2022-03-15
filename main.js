@@ -46,7 +46,8 @@ function findCommonElement(array1, array2) {
 }
  
 
-function checkWord(attempt) {
+function checkWord(att) {
+    let attempt = att.toLowerCase()
     if (attempt == word) {
         hasFinished = true
         jsConfetti.addConfetti()
