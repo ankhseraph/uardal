@@ -2,10 +2,12 @@ let selectedRow = 'a'
 let letter = 0
 let hasFinished = false
 import WORDS from './words.js'
+import 'animate.css'
 let word = WORDS[Math.floor(Math.random()*1682)]
 console.log(word)
 const keys = document.getElementsByClassName("letter")
 const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+import 'animate.css'
 const jsConfetti = new JSConfetti()
 const answer = document.getElementById("answer")
 
