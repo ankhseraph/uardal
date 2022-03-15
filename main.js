@@ -107,7 +107,7 @@ function type(event) {
         if (letter != 5) {
             letter += 1
             changedBox = document.getElementById(letter + selectedRow);
-            changedBox.innerHTML = event
+            changedBox.innerHTML = event.toUpperCase()
         }}
     }
 
@@ -116,27 +116,27 @@ function type(event) {
 
         if (contains(WORDS, writtenWord)) {
             if (selectedRow == 'a') {
-                checkWord(writtenWord);
+                checkWord(writtenWord.toLowerCase);
                 selectedRow = 'b'
                 letter = 0;
 
             } else if (selectedRow == 'b') {
-                checkWord(writtenWord);
+                checkWord(writtenWord.toLowerCase());
                 selectedRow = 'c'
                 letter = 0;
 
             } else if (selectedRow == 'c') {
-                checkWord(writtenWord);
+                checkWord(writtenWord.toLowerCase());
                 selectedRow = 'd'
                 letter = 0;
 
             } else if (selectedRow == 'd') {
-                checkWord(writtenWord);
+                checkWord(writtenWord.toLowerCase());
                 selectedRow = 'e'
                 letter = 0;
 
             } else if (selectedRow == 'e') {
-                checkWord(writtenWord);
+                checkWord(writtenWord.toLowerCase());
                 selectedRow = 'f'
                 letter = 0;
 
