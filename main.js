@@ -151,27 +151,27 @@ function type(event) {
         // ^^^ Getting the typed word.
         if (contains(WORDS, writtenWord)) { // Sorta inefficient code to going to the next row after the user has clicked enter.
             if (selectedRow == 'a') {
-                checkWord(writtenWord.toLowerCase);
+                checkWord(writtenWord)
                 selectedRow = 'b'
                 letter = 0;
 
             } else if (selectedRow == 'b') {
-                checkWord(writtenWord.toLowerCase());
+                checkWord(writtenWord)
                 selectedRow = 'c'
                 letter = 0;
 
             } else if (selectedRow == 'c') {
-                checkWord(writtenWord.toLowerCase());
+                checkWord(writtenWord);
                 selectedRow = 'd'
                 letter = 0;
 
             } else if (selectedRow == 'd') {
-                checkWord(writtenWord.toLowerCase());
+                checkWord(writtenWord);
                 selectedRow = 'e'
                 letter = 0;
 
             } else if (selectedRow == 'e') {
-                checkWord(writtenWord.toLowerCase());
+                checkWord(writtenWord);
                 selectedRow = 'f'
                 letter = 0;
 
