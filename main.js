@@ -82,9 +82,8 @@ function checkWord(attempt) {
             If the randomly chosen word does not contain the letter of the
             attempt, we remove it from the keyboard and make it gray.
             */
-
+            let wrongLetter = document.getElementById((i+1)+selectedRow
             /* Making it gray.
-            let wrongLetter = document.getElementById((i+1)+selectedRow)
             wrongLetter.style["background-color"] = "#545457"
             anim(wrongLetter, 'flipInX')
 
