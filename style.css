@@ -4,14 +4,10 @@
     -ms-user-select: none;
     user-select: none;
 }
+
 .animate__animated.animate__hinge {
   --animate-duration: 0.55s;
 }
-
-button {
-    touch-action: manipulation;
-}
-
 
 h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
