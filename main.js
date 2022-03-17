@@ -31,7 +31,6 @@ function anim(element, anim) { // Easier way to use animations using the animate
 }
 
 
-
 function findCommonElement(array1, array2) { // Used for adding in yellow letters.
      
 
@@ -87,7 +86,6 @@ function checkWord(attempt) {
             /* Making it gray.
             wrongLetter.style["background-color"] = "#545457"
             anim(wrongLetter, 'flipInX')
-
             Upon further notice, no point in making it gray if it falls off anyway.
             */
 
