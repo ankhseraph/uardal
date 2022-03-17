@@ -3,7 +3,6 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    touch-action: manipulation;
 }
 .animate__animated.animate__hinge {
   --animate-duration: 0.55s;
