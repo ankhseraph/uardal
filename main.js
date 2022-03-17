@@ -83,8 +83,8 @@ function checkWord(attempt) {
             attempt, we remove it from the keyboard and make it gray.
             */
             let wrongLetter = document.getElementById((i+1)+selectedRow)
-            /* Making it gray.
             wrongLetter.style["background-color"] = "#545457"
+            /*
             anim(wrongLetter, 'flipInX')
             Upon further notice, no point in making it gray if it falls off anyway.
             */
