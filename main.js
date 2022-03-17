@@ -82,16 +82,14 @@ function checkWord(attempt) {
             If the randomly chosen word does not contain the letter of the
             attempt, we remove it from the keyboard and make it gray.
             */
+
             let wrongLetter = document.getElementById((i+1)+selectedRow)
             wrongLetter.style["background-color"] = "#545457"
-            /*
             anim(wrongLetter, 'flipInX')
-            Upon further notice, no point in making it gray if it falls off anyway.
-            */
 
             // Removing from the keyboard.
             let wrongKey = document.getElementById(wrongLetter.innerHTML)
-            // wrongKey.style["background-color"] = "#0d0d0e"
+            wrongKey.style["background-color"] = "#0d0d0e"
             anim(wrongKey, 'hinge')
 
             // Putting into the array of wrong letters so users can't still type it with a real keyboard.
