@@ -33,10 +33,6 @@ h1 {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.empty {
-    background-color: #121213;
-    pointer-events: none;
-}
 hr {
     position: relative;
     top: 12px;
@@ -94,6 +90,12 @@ hr {
     width:40px;
     justify-content: center;
 }
+
+#keyboard .empty {
+    background-color: #121213;
+    pointer-events: none;
+}
+
 #keyboard .space {
     clear: left;
     width: 681px;
