@@ -8,7 +8,7 @@ let selectedRow = 'a' // The current row.
 let letter = 0 // The current letter.
 let wrongLetters = [] // Letters that cannot be pressed through keyboards.
 let hasFinished = false
-
+console.log(word)
 // Elements
 const answer = document.getElementById("answer") // The answer text if the user didn't guess the answer.
 
