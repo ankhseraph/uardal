@@ -73,6 +73,7 @@ hr {
     padding: 0;
     list-style: none;
     justify-content: center;
+    touch-action: manipulation;
 }
 #keyboard li {
     float: left;
