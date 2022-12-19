@@ -52,6 +52,7 @@ const answer = document.getElementById("answer") // The answer text if the user 
 
 giveup.addEventListener("click", () => {
   answer.style = "display: inline;"
+  answer.innerHTML = word.toUpperCase()
 })
 
 
