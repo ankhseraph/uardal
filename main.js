@@ -44,16 +44,9 @@ let letter = 0 // The current letter.
 let wrongLetters = [] // Letters that cannot be pressed through keyboards.
 let hasFinished = false
 
-const giveup = document.getElementById("giveup")
-
 console.log(word)
 // Elements
 const answer = document.getElementById("answer") // The answer text if the user didn't guess the answer.
-
-giveup.addEventListener("click", () => {
-  answer.style = "display: inline;"
-  answer.innerHTML = word.toUpperCase()
-})
 
 
 // Alphabet
