@@ -125,8 +125,8 @@ function checkWord(attempt) {
             anim(wrongLetter, 'flipInX')
 
             // Removing from the keyboard.
-            //let wrongKey = document.getElementById(wrongLetter.innerHTML)
-            //wrongKey.style["background-color"] = "#0d0d0e"
+            let wrongKey = document.getElementById(wrongLetter.innerHTML)
+            wrongKey.style["opacity"] = "0.5"
             //anim(wrongKey, 'hinge')
 
             // Putting into the array of wrong letters so users can't still type it with a real keyboard.
