@@ -169,7 +169,7 @@ function type(event) {
     }
 
     if (contains(alphabet, event)) { // Typing in letters code
-        if (!(contains(wrongLetters, event))) { 
+        //if (!(contains(wrongLetters, event))) { 
             /*
             If the letter has been used before, don't let them type it.
             */
@@ -179,7 +179,7 @@ function type(event) {
                 changedBox = document.getElementById(letter + selectedRow)
                 changedBox.innerHTML = event  // Setting the box to the letter.
             }
-        }
+        //}
     }
 
     if (event == 'Enter') {
