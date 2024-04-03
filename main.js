@@ -126,7 +126,7 @@ function checkWord(attempt) {
 
             // Removing from the keyboard.
             let wrongKey = document.getElementById(wrongLetter.innerHTML)
-            wrongKey.style["opacity"] = "0.5"
+            wrongKey.style = "opacity: 0.5;"
             //anim(wrongKey, 'hinge')
 
             // Putting into the array of wrong letters so users can't still type it with a real keyboard.
