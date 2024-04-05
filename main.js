@@ -44,7 +44,7 @@ let letter = 0 // The current letter.
 let wrongLetters = [] // Letters that cannot be pressed through keyboards.
 let hasFinished = false
 
-console.log('NU MAI TRISA FRAIERE');\
+console.log('NU MAI TRISA FRAIERE');
 console.log(`
 ⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣤⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⢰⡿⠋⠁⠀⠀⠈⠉⠙⠻⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
