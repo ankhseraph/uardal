@@ -116,9 +116,7 @@ function checkWord(attempt) {
     // Right off the bat, we can check if the guess is correct and end the game here.
     if (attempt == word) {
         hasFinished = true
-        while(true){
-        jsConfetti.addConfetti()
-        }
+        setInterval(jsConfetti.addConfetti(), 50);
     }
 
 
