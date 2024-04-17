@@ -11,6 +11,10 @@ let lastTapAt = 0
 let lastClientX = 0
 let lastClientY = 0
 
+function confetti() {
+  jsConfetti.addConfetti();
+}
+
 export default function preventDoubleTapZoom(event) {
   // Exit early if this involves more than one finger (e.g. pinch to zoom)
   if (event.touches.length > 1) {
@@ -116,7 +120,7 @@ function checkWord(attempt) {
     // Right off the bat, we can check if the guess is correct and end the game here.
     if (attempt == word) {
         hasFinished = true
-        setInterval(jsConfetti.addConfetti(), 50);
+        setInterval(confetti, 50);
     }
 
 
