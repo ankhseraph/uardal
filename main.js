@@ -47,6 +47,7 @@ let selectedRow = 'a' // The current row.
 let letter = 0 // The current letter.
 let wrongLetters = [] // Letters that cannot be pressed through keyboards.
 let hasFinished = false
+let didWin = false
 
 console.log('NU MAI TRISA :(((');
 console.log(`dar cuvantul e ${word} daca tot esti asa`);
@@ -106,6 +107,7 @@ function checkWord(attempt) {
     // Right off the bat, we can check if the guess is correct and end the game here.
     if (attempt == word) {
         hasFinished = true
+        didWin = true
         confetti()
     }
 
@@ -219,9 +221,12 @@ function type(event) {
 
             } else if (selectedRow == 'f') {
                 checkWord(writtenWord)
-                answer.style["display"] = "block"
-                answer.innerHTML = word.toUpperCase();
-                anim(answer, 'fadeIn')
+                if (!didWin) {
+                    hasFinished = true
+                    answer.style["display"] = "block"
+                    answer.innerHTML = `Cuvantul era ${word.toUpperCase()}`
+                    anim(answer, 'fadeIn')
+                }
             }
         }
     }
