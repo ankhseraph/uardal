@@ -42,7 +42,7 @@ export default function preventDoubleTapZoom(event) {
 }
 
 // Game
-let word = WORDS[Math.floor(Math.random()*1682)] // Randomly chosen word.
+let word = WORDS[Math.floor(Math.random() * WORDS.length)] // Randomly chosen word.
 let selectedRow = 'a' // The current row.
 let letter = 0 // The current letter.
 let wrongLetters = [] // Letters that cannot be pressed through keyboards.
