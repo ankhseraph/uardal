@@ -75,91 +75,65 @@ function anim(element, anim) { // Easier way to use animations using the animate
 }
 
 
-function findCommonElement(array1, array2) { // Used for adding in yellow letters.
-     
-
-    for(let i = 0; i < array1.length; i++) {
-
-        for(let j = 0; j < array2.length; j++) {
-
-            if(array1[i] === array2[j]) {
-
-                let yellowLetter = document.getElementById((i+1)+selectedRow)
-
-                if (yellowLetter.style["background-color"] != "#121213" || yellowLetter.style["background-color"] != "#6d9c70") {
-                    // Making the letter yellow.
-                    yellowLetter.style["background-color"] = "#d1c27c";
-                    anim(yellowLetter, 'flipInX')
-
-                    // Making the keyboard key yellow.
-                    let yellowKey = document.getElementById(yellowLetter.innerHTML) 
-                    yellowKey.style["background-color"] = "#d1c27c"
-                    anim(yellowKey, 'fadeIn')
-                }
-            }
-        }
-    }
-}
- 
-
-function checkWord(attempt) { 
-
-    // Right off the bat, we can check if the guess is correct and end the game here.
+function checkWord(attempt) {
+    // Check if the guess is correct and end the game here.
     if (attempt == word) {
         hasFinished = true
         didWin = true
         confetti()
     }
 
-
-    // Arrays the letters of the words will go in.
-    let attLetters = [] // The attempt
-    let trueLetters = [] // The randomly chosen word
-
-    for (let i = 0; i < attempt.length; i++) { // Sorting the letters of the words into arrays.
-        attLetters.push(attempt[i])
-        trueLetters.push(word[i])
+    // Count occurrences of each letter in the target word
+    let letterCounts = {}
+    for (let i = 0; i < word.length; i++) {
+        let letter = word[i]
+        letterCounts[letter] = (letterCounts[letter] || 0) + 1
     }
 
+    // First pass: mark green letters and reduce counts
+    let results = ['gray', 'gray', 'gray', 'gray', 'gray']
     for (let i = 0; i < attempt.length; i++) {
-        if (!(trueLetters.includes(attLetters[i]))) { 
-            /*
-            If the randomly chosen word does not contain the letter of the
-            attempt, we remove it from the keyboard and make it gray.
-            */
-
-            let wrongLetter = document.getElementById((i+1)+selectedRow)
-            wrongLetter.style["background-color"] = "#545457"
-            anim(wrongLetter, 'flipInX')
-
-            // Removing from the keyboard.
-            let wrongKey = document.getElementById(wrongLetter.innerHTML)
-            wrongKey.style = "opacity: 0.5;"
-            //anim(wrongKey, 'hinge')
-
-            // Putting into the array of wrong letters so users can't still type it with a real keyboard.
-            //wrongLetters.push(wrongLetter.innerHTML)
+        if (attempt[i] == word[i]) {
+            results[i] = 'green'
+            letterCounts[attempt[i]]--
         }
     }
 
-    findCommonElement(attLetters, trueLetters) // Getting yellow letters
-    
-    for (let i = 0; i < attempt.length; i++) { 
-
-        // Getting correct letters
-
-        if (attempt[i] == word[i]) { 
-            // Making the letter green.
-            let correctLetter = document.getElementById((i+1)+selectedRow)
-            correctLetter.style["background-color"] = "#6d9c70";
-            anim(correctLetter, 'fadeInX')
-
-            // Making the key green.
-            let correctKey = document.getElementById(correctLetter.innerHTML)
-            correctKey.style["background-color"] = "#6d9c70"
-            anim(correctKey, 'fadeIn')
+    // Second pass: mark yellow letters for remaining positions
+    for (let i = 0; i < attempt.length; i++) {
+        if (results[i] == 'gray' && letterCounts[attempt[i]] > 0) {
+            results[i] = 'yellow'
+            letterCounts[attempt[i]]--
         }
+    }
 
+    // Apply the visual styles
+    for (let i = 0; i < attempt.length; i++) {
+        let letterElement = document.getElementById((i+1)+selectedRow)
+        let keyElement = document.getElementById(letterElement.innerHTML)
+
+        if (results[i] == 'green') {
+            letterElement.style["background-color"] = "#6d9c70"
+            anim(letterElement, 'flipInX')
+            keyElement.style["background-color"] = "#6d9c70"
+            anim(keyElement, 'fadeIn')
+        } else if (results[i] == 'yellow') {
+            letterElement.style["background-color"] = "#d1c27c"
+            anim(letterElement, 'flipInX')
+            // Only make key yellow if it's not already green
+            if (keyElement.style["background-color"] != "rgb(109, 156, 112)") {
+                keyElement.style["background-color"] = "#d1c27c"
+                anim(keyElement, 'fadeIn')
+            }
+        } else {
+            letterElement.style["background-color"] = "#545457"
+            anim(letterElement, 'flipInX')
+            // Only dim key if it's not already green or yellow
+            if (keyElement.style["background-color"] != "rgb(109, 156, 112)" &&
+                keyElement.style["background-color"] != "rgb(209, 194, 124)") {
+                keyElement.style.opacity = "0.5"
+            }
+        }
     }
 }
 
