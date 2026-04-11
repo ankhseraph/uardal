@@ -54,6 +54,7 @@ console.log(`dar cuvantul e ${word} daca tot esti asa`);
 
 // Elements
 const answer = document.getElementById("answer") // The answer text if the user didn't guess the answer.
+const retry = document.getElementById("retry") // Retry button
 
 
 // Alphabet
@@ -81,6 +82,8 @@ function checkWord(attempt) {
         hasFinished = true
         didWin = true
         confetti()
+        retry.style.display = "block"
+        anim(retry, 'fadeIn')
     }
 
     // Count occurrences of each letter in the target word
@@ -197,10 +200,12 @@ function type(event) {
                 checkWord(writtenWord)
                 if (!didWin) {
                     hasFinished = true
-                    answer.style["display"] = "block"
+                    answer.style.display = "block"
                     answer.innerHTML = `Cuvantul era ${word.toUpperCase()}`
                     anim(answer, 'fadeIn')
                 }
+                retry.style.display = "block"
+                anim(retry, 'fadeIn')
             }
         }
     }
