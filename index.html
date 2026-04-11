@@ -14,17 +14,9 @@
     <title>Uardal - Wordle in Romana</title>
 </head>
 
-<body id = "body" style="touch-action: manipulation;>
+<body id="body" style="touch-action: manipulation;">
     <h1>Uardal</h1>
     <hr>
-
-    <h2
-    id="answer"
-    style="display: none">
-    </h2>
-
-    <button id="retry" style="display: none" onclick="location.reload()">Incearca din nou</button>
-
 
     <div class="container">
         <div id="1a" class="grid-item"></div>
@@ -93,6 +85,10 @@
             <li class="letter" id="Enter">←</li>
         </ul>
     </div>
+
+    <h2 id="answer" style="display: none"></h2>
+    <button id="retry" style="display: none" onclick="location.reload()">Incearca din nou</button>
+
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
     <script type="module" src="main.js"></script>
 </body>
