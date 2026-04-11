@@ -112,3 +112,28 @@ hr {
     border-color: #e5e5e5;
     cursor: pointer;
 }
+
+#answer {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#retry {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    background-color: #538d4e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#retry:hover {
+    background-color: #6aaa5e;
+}
